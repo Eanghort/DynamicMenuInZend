@@ -1,0 +1,15 @@
+<table>
+    <tr>
+        <th>Menu Name</th>
+        <th>&nbsp;</th>
+        <th>&nbsp;</th>
+    </tr>
+    <?php foreach($this->data as $id=>$menu): ?>
+    <tr>
+        <td><?php echo $menu ?></td>
+        <td><a href="<?php echo $this->url(array('controller'=>'index','action'=>'update-menu','id'=>$id)); ?>">Edit</a></td>
+        <td><a href="<?php echo $this->url(array('controller'=>'index','action'=>'delete-menu','id'=>$id)); ?>">Delete</a></td>
+    </tr>
+    <?php endforeach; ?>
+</table>
+<a href="<?php echo $this->url(array('controller'=>'index','action'=>'add-menu')); ?>">Add</a>
